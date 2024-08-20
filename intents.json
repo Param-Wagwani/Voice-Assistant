@@ -1,0 +1,90 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hello", "Hey", "Good day"],
+      "responses": ["Hello! How can I assist you with the admission process?"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "Goodbye", "See you later","Tata"],
+      "responses": ["exit"]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful"],
+      "responses": ["You're welcome! I'm here to help."]
+    },
+    {
+      "tag": "courses",
+      "patterns": ["What courses do you offer?", "List of courses", "Courses available"],
+      "responses": [
+        "We offer the following courses:\n1. Artificial Intelligence and Data Science\n2. Chemical Engineering\n3. Computer Engineering\n4. Electronics and Telecommunications Engineering\n5. Information Technology"
+      ]
+    },
+    {
+      "tag": "intake",
+      "patterns": ["What is the intake for 2024?", "How many seats are available?", "Seat availability"],
+      "responses": [
+        "The intake for 2024-25 is as follows:\n1. Artificial Intelligence and Data Science: 120 seats (NRI Quota: 06)\n2. Chemical Engineering: 60 seats (NRI Quota: 03)\n3. Computer Engineering: 180 seats (NRI Quota: 09)\n4. Electronics and Telecommunications Engineering: 60 seats\n5. Information Technology: 120 seats"
+      ]
+    },
+    {
+      "tag": "college_info",
+      "patterns": ["Tell me about TSEC", "College profile", "About the college"],
+      "responses": [
+        "Thadomal Shahani Engineering College (TSEC) was established in 1983 and is recognized by the Government of Maharashtra. It is approved by the AICTE and affiliated with the University of Mumbai. TSEC offers a 4-year Bachelor of Engineering (B.E.) Degree program in various disciplines and also provides a Ph.D. program in Information Technology, Computer Engineering, and Electronics & Telecommunication."
+      ]
+    },
+    {
+      "tag": "achievements",
+      "patterns": ["What are the college achievements?", "College achievements", "Success of TSEC"],
+      "responses": [
+        "TSEC has a strong track record of placing graduating students in leading enterprises. More than 90 companies offer campus placements to our graduates. Our programs have been accredited by the National Board of Accreditation. The college also has a system in place to integrate emerging areas in engineering into the curriculum."
+      ]
+    },
+    {
+      "tag": "admission_process",
+      "patterns": ["How can I apply?", "Admission process", "How to apply"],
+      "responses": [
+        "Online applications are invited from eligible candidates for admission to the first year of our 4-year degree courses in engineering. Applications and the prospectus are available on our website: www.tsecadmission.org."
+      ]
+    },
+    {
+      "tag": "contact_info",
+      "patterns": ["Contact details", "How can I contact?", "Contact information"],
+      "responses": [
+        "You can contact us at the following numbers: 9967255590, 9987111590."
+      ]
+    },
+    {
+      "tag": "institute_code",
+      "patterns": ["What is the institute code?", "Institute code"],
+      "responses": [
+        "The institute code for Thadomal Shahani Engineering College is EN3182."
+      ]
+    },
+    {
+      "tag": "placement",
+      "patterns": ["Placement details", "Job placements", "Graduate placements"],
+      "responses": [
+        "TSEC has a successful placement record with historic average pay packages. More than 90 companies offer campus placements to our graduates."
+      ]
+    },
+    {
+      "tag": "news",
+      "patterns": ["What's the news?", "Tell me the news", "Any updates?", "Latest news","Current updates"],
+      "responses": ["news"]
+        },
+        {
+            "tag": "weather",
+            "patterns": ["What's the weather?", "Tell me the weather", "How's the weather?", "Weather forecast"],
+            "responses": ["weather"]
+        },
+        {
+            "tag": "tech_news",
+            "patterns": ["What's the latest tech news?", "Tell me tech news", "Any tech updates?", "Latest technology news"],
+            "responses": ["tech_news"]
+        }
+  ]
+}
