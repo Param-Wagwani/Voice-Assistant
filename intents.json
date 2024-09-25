@@ -85,6 +85,14 @@
             "tag": "tech_news",
             "patterns": ["What's the latest tech news?", "Tell me tech news", "Any tech updates?", "Latest technology news"],
             "responses": ["tech_news"]
+        },
+        {
+          "tag": "open_application",
+          "patterns": ["Open Notepad", "Open VSCode", "Open Git Bash", "Open Settings"],
+          "responses": [
+            "Opening application now..."
+          ]
         }
+    
   ]
 }

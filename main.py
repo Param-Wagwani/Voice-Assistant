@@ -5,11 +5,17 @@ from google_news import google_news_search, parse_google_news_results
 from web_browser import open_browser
 from chat import get_response
 from model import NeuralNet
+from open_apps import open_notepad,open_vscode
+from search_dir import find_directory, find_directory_name
+from git_commands import initialize_git_repo,add_files,find_commit_message,commit_changes
+from create_project import create_vite_project
 
 from bs4 import BeautifulSoup
 
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+
+
 
 
 def weather(city):
@@ -67,13 +73,15 @@ def main():
     print("Hello! How can I assist you today?")
     speak("Hello! How can I assist you today?")
 
+    git_dir = ''
+
     loop_count = 0
 
     while True:
         input_text = recognize_speech()
-
         loop_count += 1
         ans = get_response(input_text)
+        # print("Ans: ",ans)
         if input_text:
             speak(f"You said: {input_text}")
 
@@ -93,9 +101,58 @@ def main():
         elif ans == "exit":
             speak("See you next time")
             break
-        # elif input_text.lower() == "open notepad":
-        #     message = open_notepad()
-        #     speak(message)
+        elif input_text.lower() == "open notepad":
+            message = open_notepad()
+            speak(message)
+        elif  "open vs code" in input_text.lower():
+            directory_name = find_directory_name(input_text)
+            if directory_name is not None:
+                print(directory_name)
+                directory_path = find_directory(directory_name,r"C:\Users\calgu\OneDrive\Desktop")
+                message = open_vscode(directory_path)
+            else:
+                message = open_vscode(None)    
+            speak(message)
+            input_text = ''
+
+        elif "initialise git " in input_text.lower():
+            directory_name = find_directory_name(input_text)
+            if directory_name is not None:
+                print(directory_name)
+                directory_path = find_directory(directory_name,r"C:\Users\calgu\OneDrive\Desktop")
+                message = initialize_git_repo(directory_path)
+                git_dir = directory_path
+            else:
+                message = "Properly specify the folder for initalization"    
+            speak(message)
+            input_text = ''
+
+        elif "staging area" in input_text.lower():
+            print(git_dir)
+            add_files(git_dir)
+            speak("Added all files to staging area")
+
+        elif "commit" in input_text.lower():
+            message = find_commit_message(input_text)
+            git_dir = r"C:\Users\calgu\OneDrive\Desktop\test"
+            print(message)
+            commit_changes(git_dir,message)
+            speak(f"commited changes to {git_dir} with message {message}" )
+
+        elif "create a react project" in input_text.lower():
+            directory_name = find_directory_name(input_text)
+            
+            if directory_name is not None:
+                print(directory_name)
+                directory_path = find_directory(directory_name,r"C:\Users\calgu\OneDrive\Desktop")
+                print(directory_path)
+                message = create_vite_project(directory_path)
+            else:
+               message = "Properly specify the folder for creation" 
+            speak(message)
+            input_text = ''
+
+
 
         # elif input_text.lower().__contains__("news"):
         # #     query = input_text  # query
