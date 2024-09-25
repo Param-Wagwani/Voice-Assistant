@@ -4,7 +4,7 @@ from speech import recognize_speech, speak
 from google_news import google_news_search, parse_google_news_results
 from web_browser import open_browser
 from chat import get_response
-from chat_bot.model import NeuralNet
+from model import NeuralNet
 
 from bs4 import BeautifulSoup
 
