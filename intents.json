@@ -3,7 +3,7 @@
     {
       "tag": "greeting",
       "patterns": ["Hi", "Hello", "Hey", "Good day"],
-      "responses": ["Hello! How can I assist you with the admission process?"]
+      "responses": ["Hello! How can I assist you"]
     },
     {
       "tag": "goodbye",
@@ -86,13 +86,26 @@
             "patterns": ["What's the latest tech news?", "Tell me tech news", "Any tech updates?", "Latest technology news"],
             "responses": ["tech_news"]
         },
-        {
-          "tag": "open_application",
-          "patterns": ["Open Notepad", "Open VSCode", "Open Git Bash", "Open Settings"],
-          "responses": [
-            "Opening application now..."
-          ]
-        }
+    {
+        "tag": "open_notepad",
+        "patterns": ["Open Notepad", "Launch Notepad", "Start Notepad"],
+        "responses": ["open_notepad"]
+    },
+    {
+    "tag": "open_vscode",
+    "patterns": ["Open VS Code", "Launch VS Code", "Start VS Code", "Open Visual Studio Code"],
+    "responses": ["vscode"]
+},{
+    "tag": "initialize_git",
+    "patterns": ["Initialize Git", "Start a new Git repository", "Create a Git repo", "Set up Git in this folder"],
+    "responses": ["git"]
+},{
+    "tag": "create_react_project",
+    "patterns": ["Create a React project", "Set up a new React app", "Make a React application", "Start a React project"],
+    "responses": ["react_project"]
+}
+
+
     
   ]
 }

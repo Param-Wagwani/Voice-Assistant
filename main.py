@@ -101,10 +101,10 @@ def main():
         elif ans == "exit":
             speak("See you next time")
             break
-        elif input_text.lower() == "open notepad":
+        elif ans == "open_notepad":
             message = open_notepad()
             speak(message)
-        elif  "open vs code" in input_text.lower():
+        elif  ans == "vs_code":
             directory_name = find_directory_name(input_text)
             if directory_name is not None:
                 print(directory_name)
@@ -115,7 +115,7 @@ def main():
             speak(message)
             input_text = ''
 
-        elif "initialise git " in input_text.lower():
+        elif ans=="git":
             directory_name = find_directory_name(input_text)
             if directory_name is not None:
                 print(directory_name)
@@ -139,7 +139,7 @@ def main():
             commit_changes(git_dir,message)
             speak(f"commited changes to {git_dir} with message {message}" )
 
-        elif "create a react project" in input_text.lower():
+        elif ans == "react_project":
             directory_name = find_directory_name(input_text)
             
             if directory_name is not None:

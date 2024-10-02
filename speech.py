@@ -10,11 +10,9 @@ def recognize_speech():
         try:
             recognizer.adjust_for_ambient_noise(source)
             audio = recognizer.listen(source, timeout=8, phrase_time_limit=8)
-            
             print("Audio captured.")
             text = recognizer.recognize_google(audio)
             print("Recognized:", text)
-            
             return text
         except sr.WaitTimeoutError:
             print("Timeout waiting for audio.")
