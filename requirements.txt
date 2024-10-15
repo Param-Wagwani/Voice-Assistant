@@ -8,3 +8,4 @@ pyaudio
 pyttsx3
 pypdf2
 pdfplumber
+pywhatkit
