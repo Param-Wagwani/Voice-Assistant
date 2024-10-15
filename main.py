@@ -5,10 +5,16 @@ from google_news import google_news_search, parse_google_news_results
 from web_browser import open_browser
 from chat import get_response
 from model import NeuralNet
-from open_apps import open_notepad,open_vscode
-from search_dir import find_directory, find_directory_name
+from open_apps import open_notepad,open_vscode,execute_command
+from search_dir import find_directory, find_directory_name,find_file,find_file_name
 from git_commands import initialize_git_repo,add_files,find_commit_message,commit_changes
 from create_project import create_vite_project
+from run_code import compile_and_run_js_code,compile_and_run_py_code
+
+from pdf_reader import extract_abstract
+
+from whatsapp import send_whatsapp_message
+
 
 from bs4 import BeautifulSoup
 
@@ -148,9 +154,60 @@ def main():
                 print(directory_path)
                 message = create_vite_project(directory_path)
             else:
-               message = "Properly specify the folder for creation" 
+                message = "Properly specify the folder for creation"    
             speak(message)
             input_text = ''
+
+        elif "execute" in input_text.lower():
+            file_name = find_file_name(input_text)
+            
+            if file_name is not None:
+                print(file_name)
+                file_path = find_file(file_name,r"C:\Users\calgu\OneDrive\Desktop")
+                print("file_path : ",file_path)
+                if "js" in file_name:
+                    compile_and_run_js_code(file_path)
+                if "py" in file_name:
+                    compile_and_run_py_code(file_path)
+
+            else:
+                message = "Properly specify the file for execution" 
+                speak(message)
+                input_text = ''
+
+        elif "open" in input_text.lower():
+            execute_command(input_text)
+
+        elif "read" in input_text.lower():
+            print("Enter file Name: ")
+            speak("Enter File name")
+            pdf_path = recognize_speech()
+            pdf_path = pdf_path.replace(" ","_") + ".pdf"
+            format, abstract = extract_abstract(pdf_path)
+            print(f"Paper format: {format}")
+            print(f"Abstract:\n{abstract}")
+            speak(f"Abstract:\n{abstract}")
+
+        elif "send message" in input_text:
+            print("To whom you want to send: ")
+            speak("To whom do you want to send: ")
+            record = recognize_speech()
+            record = record.replace(" ","").lower()
+            print('Enter the message: ')
+            speak("Enter message: ")
+            message = recognize_speech()
+            send_whatsapp_message(record,message)
+
+
+        
+
+
+
+            
+
+
+    
+
 
 
 

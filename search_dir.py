@@ -48,3 +48,14 @@ def find_file(filename, search_path):
         if filename in files:
             return os.path.join(root, filename)
     return None
+
+
+def find_file_name(text):
+    # Regular expression to capture the file name after 'run' or 'open'
+    pattern = r'(?:run|execute)\s+([A-Za-z0-9_ .-]+\.[A-Za-z]{2,4})'
+
+    match = re.search(pattern, text)
+    if match:
+        return match.group(1).strip()
+    else:
+        return None
