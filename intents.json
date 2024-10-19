@@ -103,7 +103,46 @@
     "tag": "create_react_project",
     "patterns": ["Create a React project", "Set up a new React app", "Make a React application", "Start a React project"],
     "responses": ["react_project"]
-}
+},{
+        "tag": "execute_program_file",
+        "patterns": [
+            "Execute the program file",
+            "Run my program",
+            "Start the application",
+            "Open the program"
+        ],
+        "responses": ["execute_program"]
+    },
+    {
+        "tag": "read_pdf_file",
+        "patterns": [
+            "Read the PDF file",
+            "Open a PDF",
+            "Show me the PDF document",
+            "Extract text from the PDF"
+        ],
+        "responses": ["read_pdf"]
+    },
+    {
+        "tag": "send_whatsapp_message",
+        "patterns": [
+            "Send a message on WhatsApp",
+            "WhatsApp message to someone",
+            "Message my friend on WhatsApp",
+            "Send WhatsApp text"
+        ],
+        "responses": ["send_whatsapp"]
+    },
+    {
+        "tag": "send_email",
+        "patterns": [
+            "Send an email",
+            "Email someone",
+            "Compose a new email",
+            "Send a message via email"
+        ],
+        "responses": ["send_email"]
+    }
 
 
     

@@ -9,3 +9,4 @@ pyttsx3
 pypdf2
 pdfplumber
 pywhatkit
+PyQt6
