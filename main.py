@@ -1,6 +1,6 @@
 import requests
 from weather import weather
-from speech import speak
+from speech import speak,recognize_speech
 from google_news import google_news_search, parse_google_news_results
 from web_browser import open_browser
 from chat import get_response
@@ -21,9 +21,7 @@ headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
 
 
-def recognize_speech():
-    s = input("Enter the text")
-    return s
+
 
 
 def main():
