@@ -53,7 +53,7 @@ commands_dict = {
     "open microsoft store": ["start", "ms-windows-store:"],
     "open photos app": ["start", "ms-photos:"],
     "open mail app": ["start", "outlookmail:"],
-    "open movies  app": ["start", "mswindowsvideo:"],
+    "open movies app": ["start", "mswindowsvideo:"],
     "open groove music": ["start", "mswindowsmusic:"],
     "open people app": ["start", "ms-people:"],
     "open xbox game bar": ["start", "ms-gamingoverlay:"],
@@ -67,9 +67,9 @@ commands_dict = {
 "open netflix": ["start", "https://www.netflix.com"],
 "open gmail": ["start", "https://mail.google.com"],
 "open outlook": ["start", "outlook"],
-"open libreoffice writer": ["start", "soffice", "--writer"],
-"open libreoffice calc": ["start", "soffice", "--calc"],
-"open libreoffice impress": ["start", "soffice", "--impress"],
+"open libre office writer": ["start", "soffice", "--writer"],
+"open libre office calc": ["start", "soffice", "--calc"],
+"open libre office impress": ["start", "soffice", "--impress"],
 "open whatsapp": ["start", "https://web.whatsapp.com"],
 
 }

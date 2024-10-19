@@ -69,7 +69,7 @@ def extract_abstract(pdf_path):
     return format, abstract
 
 
-pdf_path = 'paper_1.pdf'
-format, abstract = extract_abstract(pdf_path)
-print(f"Paper format: {format}")
-print(f"Abstract:\n{abstract}")
+# pdf_path = 'paper_1.pdf'
+# format, abstract = extract_abstract(pdf_path)
+# print(f"Paper format: {format}")
+# print(f"Abstract:\n{abstract}")

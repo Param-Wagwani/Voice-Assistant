@@ -15,6 +15,8 @@ from pdf_reader import extract_abstract
 
 from whatsapp import send_whatsapp_message
 
+from send_mail import send_email
+
 
 from bs4 import BeautifulSoup
 
@@ -110,7 +112,7 @@ def main():
         elif ans == "open_notepad":
             message = open_notepad()
             speak(message)
-        elif  ans == "vs_code":
+        elif  "vs code" in input_text:
             directory_name = find_directory_name(input_text)
             if directory_name is not None:
                 print(directory_name)
@@ -197,6 +199,11 @@ def main():
             speak("Enter message: ")
             message = recognize_speech()
             send_whatsapp_message(record,message)
+
+        elif "mail" in input_text:
+            send_email()
+            
+
 
 
         

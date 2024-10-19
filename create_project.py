@@ -11,6 +11,7 @@ def create_vite_project(directory):
         # Run the command using subprocess in the specified directory
         os.chdir(directory)
         npm_path = r"C:\Program Files\nodejs\npm.cmd"
+      
         result = subprocess.run(
             [npm_path, "create", "vite@latest", "my-react-app", "--", "--template", "react"],
             check=True,  # Raise an error if the command fails

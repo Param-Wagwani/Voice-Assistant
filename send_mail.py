@@ -9,16 +9,19 @@ def send_email():
     from_email = "wizmuser@gmail.com"
     password = "udna lymb fcki qflf"
 
-    speak("Whom should i send this?")
+    print("Whom should i send this email?")
+    speak("Whom should i send this email?")
     to_email = recognize_speech()
     to_email = to_email.lower().strip().replace(" at the rate ","@").replace(" ","")
 
     print(to_email)
 
+    print("Can you tell me the Subject")
     speak("Can you tell me the Subject")
     subject = recognize_speech()
 
 
+    print("Pleae provide the messge: ")
     speak("Pleae provide the messge: ")
     message = recognize_speech()
 
@@ -47,7 +50,6 @@ def send_email():
 # body = "Hello,\n\nKuch bannana hai ki \nBro"
 # send_email("Happy Birthday",body,"wizardparam@gmail.com")
 
-send_email()
 
 
 
